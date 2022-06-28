@@ -45,7 +45,7 @@ Plot monthly proportion of deaths.
 ```ggplot(monthly, aes(x = date, y = proportion_deaths)) +geom_line()
 ```
 
-# Determine Effect of Intervention
+## Determine Effect of Intervention
 
 From this date handwashing was made mandatory: ('1847-06-01')
 
