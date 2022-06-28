@@ -16,13 +16,15 @@ yearly <- read_csv("yearly_deaths_by_clinic.csv")
 
 Add a new column to yearly with proportion of deaths per no. births.
 
-```yearly <- yearly %>%
+```
+yearly <- yearly %>%
   mutate(proportion_deaths = deaths/births)
 ```
 
 Plot yearly proportion of deaths at the two clinics.
 
-```options(repr.plot.width=7, repr.plot.height=4)
+```
+options(repr.plot.width=7, repr.plot.height=4)
 ggplot(yearly, aes(x = year, y = proportion_deaths, color =clinic)) +geom_line()
 ```
 
@@ -30,11 +32,13 @@ ggplot(yearly, aes(x = year, y = proportion_deaths, color =clinic)) +geom_line()
 
 After handwashing was implemented, monthly data was collected. 
 
-``` monthly <- read_csv("monthly_deaths.csv")
+```
+monthly <- read_csv("monthly_deaths.csv")
 ```
 Adding a new column with proportion of deaths per no. births.
 
-``` monthly <- monthly %>% 
+``` 
+monthly <- monthly %>% 
   mutate(proportion_deaths = deaths/births)
 ```
 
@@ -42,25 +46,29 @@ Adding a new column with proportion of deaths per no. births.
 
 Plot monthly proportion of deaths.
 
-```ggplot(monthly, aes(x = date, y = proportion_deaths)) +geom_line()
+```
+ggplot(monthly, aes(x = date, y = proportion_deaths)) +geom_line()
 ```
 
 ## Determine Effect of Intervention
 
 From this date handwashing was made mandatory: ('1847-06-01')
 
-```handwashing_start = as.Date('1847-06-01').
+```
+handwashing_start = as.Date('1847-06-01').
 ```
 
 Add a TRUE/FALSE column to monthly called handwashing_started.
 
-```monthly <- monthly %>%
+```
+monthly <- monthly %>%
   mutate(handwashing_started = date >= handwashing_start)
 ```
 
 Plot monthly proportion of deaths before and after handwashing.
 
-```ggplot(monthly, aes(x = date, y = proportion_deaths, color = handwashing_started)) +geom_line()
+```
+ggplot(monthly, aes(x = date, y = proportion_deaths, color = handwashing_started)) +geom_line()
 ```
 
 
@@ -73,7 +81,8 @@ Calculate the mean proportion of deaths before and after handwashing.
 
 Calculate a 95% Confidence intrerval using t.test.
 
-```test_result <- t.test(proportion_deaths ~ handwashing_started, data = monthly)
+```
+test_result <- t.test(proportion_deaths ~ handwashing_started, data = monthly)
 ```
 
 ## Conclusion
