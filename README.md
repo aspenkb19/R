@@ -30,11 +30,11 @@ ggplot(yearly, aes(x = year, y = proportion_deaths, color =clinic)) +geom_line()
 
 After handwashing was implemented, monthly data was collected. 
 
-```monthly <- read_csv("monthly_deaths.csv")
+``` monthly <- read_csv("monthly_deaths.csv")
 ```
 Adding a new column with proportion of deaths per no. births.
 
-```monthly <- monthly %>% 
+``` monthly <- monthly %>% 
   mutate(proportion_deaths = deaths/births)
 ```
 
