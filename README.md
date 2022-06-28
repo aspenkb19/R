@@ -64,7 +64,7 @@ Plot monthly proportion of deaths before and after handwashing.
 ```
 
 
-# Calculating the mean proportion of deaths before and after handwashing.
+Calculate the mean proportion of deaths before and after handwashing.
 
 ```monthly_summary <- monthly %>% 
   group_by(handwashing_started) %>%
