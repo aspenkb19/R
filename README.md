@@ -2,7 +2,7 @@
 
 ## Overview
 
-####How Semmelweis, working in an obstetrics ward in Vienna in the 19th century, made the connection between dirty hands and deadly infection.
+#### How Semmelweis, working in an obstetrics ward in Vienna in the 19th century, made the connection between dirty hands and deadly infection.
 
 Start by looking at the data that made Semmelweis realize that something 
  was wrong with the procedures at Vienna General Hospital. We have yearly data for 
